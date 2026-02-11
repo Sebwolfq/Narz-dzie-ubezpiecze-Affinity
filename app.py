@@ -47,7 +47,7 @@ if api_key:
     genai.configure(api_key=api_key)
     # Konfiguracja modelu z instrukcjami systemowymi
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-flash",
+        model_name="gemini-1.5-flash-latest",
         generation_config={"response_mime_type": "application/json"},
         system_instruction="Jesteś ZEN Hyper-Nudge Engine. Analizujesz transakcje i proponujesz ubezpieczenia Affinity (Travel, Cancellation, Electronics All-Risk, Car Rental Excess). Jeśli nie ma dopasowania, zwróć pusty JSON. Odpowiadaj w języku polskim. Format: {event_detected, recommended_product, nudge_header, nudge_body, estimated_price, call_to_action}"
     )
